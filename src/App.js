@@ -10,13 +10,15 @@ function App() {
 	const [items, setItems] = useState([]);
 
 	const [title, setTitle] = useState([]);
+	//test local http://localhost:5000/api/items
+	//server run http://localhost/api/items
 	useEffect(() => {
-		axios.get('http://localhost:5000/api/items')
+		axios.get('http://localhost/api/items')
 		  .then(response => setItems(response.data))
 		  .catch(error => console.error(error));
 	 }, [])
 	 useEffect(() => {
-		axios.get('http://localhost:5000/title')
+		axios.get('http://localhost/title')
 		  .then(response => setTitle(response.data))
 		  .catch(error => console.error(error));
 	 }, [])
