@@ -6,6 +6,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Food } from "./Food";
 
+var api = "http://localhost/api"
+
 function App() {
 	const [items, setItems] = useState([]);
 
@@ -13,12 +15,12 @@ function App() {
 	//test local http://localhost:5000/api/items
 	//server run http://localhost/api/items
 	useEffect(() => {
-		axios.get('http://localhost/api/items')
+		axios.get(`${api}/api/items`)
 		  .then(response => setItems(response.data))
 		  .catch(error => console.error(error));
 	 }, [])
 	 useEffect(() => {
-		axios.get('http://localhost/title')
+		axios.get(`${api}/title`)
 		  .then(response => setTitle(response.data))
 		  .catch(error => console.error(error));
 	 }, [])
