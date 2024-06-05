@@ -39,6 +39,8 @@ async function run(){
 	app.use(
 		cors({
 			origin: "http://20.5.3.218",
+			credentials: true,
+			
 		})
 	);
 
