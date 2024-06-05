@@ -6,7 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Food } from "./Food";
 
-var api = "http://localhost/api"
+var api = "http://localhost:5000"
 
 function App() {
 	const [items, setItems] = useState([]);
