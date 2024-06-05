@@ -36,7 +36,11 @@ async function run(){
 
 	const app = express();
 	app.use(express.json());
-	app.use(cors())
+	app.use(
+		cors({
+			origin: "http://20.5.3.218",
+		})
+	);
 
 	app.get("/", (req, resp) => {
 		resp.send("App is working");
